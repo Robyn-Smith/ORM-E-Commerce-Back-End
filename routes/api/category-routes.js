@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   // be sure to include its associated Products
   try {
     const categoryData = await Category.findAll({
-      //add book as a second model to join with - jsn comment
+      //add book as a second model to join with -----jsn comment---- change await? alternative mentioned in tuesday lesson
       include: [{ model: Product }],
     });
     res.status(200).json(categoryData);
