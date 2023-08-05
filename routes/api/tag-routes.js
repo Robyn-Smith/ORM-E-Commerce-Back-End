@@ -61,7 +61,7 @@ router.put('/:id', async (req, res) => {
     }
     res.status(200).json(tagData);
   }catch (error) {
-    res.status(500).json(err);
+    res.status(500).json(error);
 };
 });
 
@@ -81,7 +81,7 @@ router.delete('/:id', async (req, res) => {
 
     res.status(200).json(tagData);
   } catch (error) {
-    res.status(500).json(err);
+    res.status(500).json(error);
   }
 });
 
