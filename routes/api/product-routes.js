@@ -28,7 +28,7 @@ router.get('/:id', (req, res) => {
     });
 
     if (!productData) {
-      res.status(404).json({ message: 'Oops, there are no results matching this id'}); // -------change message
+      res.status(404).json({ message: 'Oops, there are no results matching this id'}); 
       return;
     }
 
@@ -161,7 +161,7 @@ router.delete('/:id', (req, res) => {
     });
 
     if (!productData) {
-      res.status(404).json({ message: 'Oops, there are no results matching this id'}); //change error message
+      res.status(404).json({ message: 'Oops, there are no results matching this id'}); 
       return;
     }
 

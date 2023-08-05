@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   // be sure to include its associated Product data
   try {
     const tagData = await Tag.findAll({
-      //add book as a second model to JOIN with ----- jsn comment--- change tagData name changed err to error
+      //add book as a second model to JOIN with ----- jsn comment--- change tagData name 
       include: [{ model: Product }],
     });
     res.status(200).json(tagData);
@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
     });
     
     if (!tagData) {
-      res.status(404).json({ message: 'Oops, there are no results matching this id'}); //----------change string
+      res.status(404).json({ message: 'Oops, there are no results matching this id'}); 
       return;
     }
 

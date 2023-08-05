@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({message: 'Oops, there are no results matching this id'}); //-- changed string
+      res.status(404).json({message: 'Oops, there are no results matching this id'}); 
       return;
     }
 
@@ -37,7 +37,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // create a new category --------------------change categoryData const name?-have already changed err to error
+  // create a new category --------------------change categoryData const name?
   try {
     const categoryData = await Category.create(req.body);
     res.status(200).json(categoryData);
@@ -60,7 +60,7 @@ router.put('/:id', (req, res) => {
       }
     );
   if (!categoryData) {
-    res.status(404).json({ message: 'Oops, there are no results matching this id'}); //------change string
+    res.status(404).json({ message: 'Oops, there are no results matching this id'}); 
     return;
   }
 
@@ -80,7 +80,7 @@ router.delete('/:id', (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({ message: 'Oops, there are no results matching this id'}); //---- change string
+      res.status(404).json({ message: 'Oops, there are no results matching this id'}); 
       return;
     }
 
