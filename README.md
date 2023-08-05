@@ -45,3 +45,4 @@ npm run start
 Finally, the code can be tested and data can be created, read, updated and deleted with the use of applications such as Postman or Insomnia.
 
 ## Walkthrough video
+https://www.youtube.com/watch?v=7f1dmJ7jZ0Y
