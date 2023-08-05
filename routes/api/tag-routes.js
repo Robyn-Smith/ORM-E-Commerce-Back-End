@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
     });
     
     if (!tagData) {
-      res.status(404).json({ message: 'No Tag found with that id!'}); //----------change string
+      res.status(404).json({ message: 'Oops, there are no results matching this id'}); //----------change string
       return;
     }
 
@@ -56,7 +56,7 @@ router.put('/:id', (req, res) => {
       {where: { id: req.params.id}
     });
     if(!categoryData){
-      res.status(404).json({message : "There is no tag with this id"});
+      res.status(404).json({message : "Oops, there are no results matching this id"});
       return
     }
     res.status(200).json(tagData);
@@ -75,7 +75,7 @@ router.delete('/:id', (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({ message: 'No tag found with this id!' });
+      res.status(404).json({ message: 'Oops, there are no results matching this id' });
       return;
     }
 
