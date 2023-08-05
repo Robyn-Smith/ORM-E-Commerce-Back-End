@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({message: 'No Category found with that id'}); //-- change string
+      res.status(404).json({message: 'Oops, there are no results matching this id'}); //-- changed string
       return;
     }
 
@@ -60,7 +60,7 @@ router.put('/:id', (req, res) => {
       }
     );
   if (!categoryData) {
-    res.status(404).json({ message: 'No Category found with that id'}); //------change string
+    res.status(404).json({ message: 'Oops, there are no results matching this id'}); //------change string
     return;
   }
 
@@ -80,7 +80,7 @@ router.delete('/:id', (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({ message: 'No Category found with that id'}); //---- change string
+      res.status(404).json({ message: 'Oops, there are no results matching this id'}); //---- change string
       return;
     }
 
