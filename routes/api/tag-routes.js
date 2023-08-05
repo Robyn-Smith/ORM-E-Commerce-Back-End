@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Product data
   try {
     const tagData = await Tag.findAll({
-      //add book as a second model to JOIN with ----- jsn comment--- change tagData name 
       include: [{ model: Product }],
     });
     res.status(200).json(tagData);
